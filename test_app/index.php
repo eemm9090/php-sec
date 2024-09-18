@@ -46,6 +46,6 @@ setToken();
       <?php endforeach; ?>
     </table>
   </div>
-  <?php unsetError(); ?> 
+  <?php unsetError(); ?>
 </body>
 </html>
