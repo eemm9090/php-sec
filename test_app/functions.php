@@ -60,8 +60,8 @@ function savePostedData($post)
             updateTodoData($post);
             break;
         case '/index.php': // 追記
-          deleteTodoData($post['id']); // 追記
-          break; // 追記
+          deleteTodoData($post['id']);
+          break;
         default:
           break;
     }
@@ -75,7 +75,7 @@ function getRefererPath()
 
 function validate($post)
 {
-    if (isset($post['content']) && $post['content'] === '') {
+    if ($post['content'] === '') {
         $_SESSION['err'] = '入力がありません';
         redirectToPostedPage();
     }
